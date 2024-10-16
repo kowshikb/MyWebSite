@@ -1,39 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="./src/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kowshik Kumar's Resume</title>
+    <link rel="stylesheet" href="./src/style.css" />
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" class="calculator-screen" id="screen" readonly>
-        
-        <div class="calculator-keys">
-            <button type="button" class="key" value="7">7</button>
-            <button type="button" class="key" value="8">8</button>
-            <button type="button" class="key" value="9">9</button>
-            <button type="button" class="key operator" value="+">+</button>
+    <header>
+        <h1>Bikkina Kowshik Kumar</h1>
+        <p>
+            Email: <a href="mailto:bikkinakowshik543@gmail.com">bikkinakowshik543@gmail.com</a> | Phone: 9502243553
+        </p>
+    </header>
 
-            <button type="button" class="key" value="4">4</button>
-            <button type="button" class="key" value="5">5</button>
-            <button type="button" class="key" value="6">6</button>
-            <button type="button" class="key operator" value="-">-</button>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#links">Links</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#interests">Interests</a></li>
+        </ul>
+    </nav>
 
-            <button type="button" class="key" value="1">1</button>
-            <button type="button" class="key" value="2">2</button>
-            <button type="button" class="key" value="3">3</button>
-            <button type="button" class="key operator" value="*">×</button>
+    <main>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="accordion">
+                <div class="accordion-header">VRSEC - Bachelors in Electronics</div>
+                <div class="accordion-body">
+                    <p>May 2017 | Vijayawada, AP | CGPA: 7.3 / 10</p>
+                </div>
+                <div class="accordion-header">Sri Chaitanya College - Class XII</div>
+                <div class="accordion-body">
+                    <p>May 2013 | Vijayawada, AP | Percentage: 93.5</p>
+                </div>
+                <div class="accordion-header">KVR Talent School - Class X</div>
+                <div class="accordion-body">
+                    <p>May 2011 | Kovvur, AP | Percentage: 87.5</p>
+                </div>
+            </div>
+        </section>
 
-            <button type="button" class="key" value="0">0</button>
-            <button type="button" class="key decimal" value=".">.</button>
-            <button type="button" class="key" value="=">=</button>
-            <button type="button" class="key operator" value="/">÷</button>
+        <section id="links">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/kowshik-kumar-7b6461b6/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://leetcode.com/kowshik1729/" target="_blank">LeetCode</a></li>
+                <li><a href="https://github.com/kowshikb" target="_blank">GitHub</a></li>
+                <li><a href="https://www.facebook.com/bikkina.kowshik/" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/kowshiks_profile/" target="_blank">Instagram</a></li>
+                <li><a href="https://kowshikb.github.io/MyWebSite/" target="_blank">My Website</a></li>
+            </ul>
+        </section>
 
-            <button type="button" class="key clear" value="clear">C</button>
-        </div>
-    </div>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming: JavaScript, Java, Python</li>
+                <li>Familiar:  HTML, CSS, Gherkin</li>
+                <li>Platforms: Web, API, Mobile</li>
+                <li>Frameworks: Playwright, Selenium, TestNG, Rest Assured</li>
+                <li>Test Approaches: Agile/Scrum, SDLC, STLC, Bug Life Cycle</li>
+                <li>Tools: Jira, Postman, Git, GitHub, Testrail, Docker, Maven, Excel, Jenkins</li>
+                <li>IDEs: VSCode, Eclipse, IntelliJ</li>
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>Experience - 7.2 Years</h2>
+            <div class="accordion">
+                <div class="accordion-header">SkillSoft - Senior QA Engineer</div>
+                <div class="accordion-body">
+                    <ul>
+                        <li>Engineered an automation framework with Playwright and JavaScript.</li>
+                        <li>Integrated UI and API tests to meet sales team needs.</li>
+                        <li>Used Git for version control.</li>
+                        <li>Integrated Jenkins for automated build and test workflows.</li>
+                        <li>Managed environments and maintained detailed logs.</li>
+                        <li>Integrated Docker in CI/CD pipelines to automate testing workflows and developed Docker images for test automation frameworks, facilitating rapid scaling and execution of tests across multiple environments.</li>
+                        <li>Reduced test data generation time by 95% and increased sales team demos to 10-15 per week.</li>
+                    </ul>
+                </div>
+                <div class="accordion-header">Qapitol QA - Senior Software Test Engineer</div>
+                <div class="accordion-body">
+                    <ul>
+                        <li>Transformed the credit card application process.</li>
+                        <li>Automated critical statement validation scenarios.</li>
+                        <li>Reduced smoke and sanity suite execution time by 40%.</li>
+                        <li>Increased functional test coverage by 20 percent by automating new features.</li>
+                    </ul>
+                </div>
+                <div class="accordion-header">PTW - Senior Software Test Engineer</div>
+                <div class="accordion-body">
+                    <ul>
+                        <li>Manually tested key functional areas of an E-commerce site.</li>
+                        <li>Expanded regression and smoke suites by incorporating new test cases to minimize manual testing efforts using Java with Selenium, TestNG, and the Page Object Model (POM) design pattern. Integrated Jenkins for seamless continuous integration and automated test execution.</li>
+                    </ul>
+                </div>
+                <div class="accordion-header">EA - QA One</div>
+                <div class="accordion-body">
+                    <ul>
+                        <li>Tested new features of a popular life simulation game.</li>
+                        <li>Learned how to write test cases, various testing techniques, usage of different tools, and Agile methodology as a fresher.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards">
+            <h2>Awards</h2>
+            <ul>
+                <li>2013: Top 6000/3.5 Lakh - EAMCET</li>
+                <li>2019: Winner - PTW's Bug Bounty</li>
+                <li>2023: Winner - Qapitol's Testing Hackathon</li>
+            </ul>
+        </section>
+
+        <section id="interests">
+            <h2>Interests</h2>
+            <p>Trading, Cricket, Geopolitics, Competitive Coding</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kowshik Kumar</p>
+    </footer>
 
     <script src="./src/script.js"></script>
 </body>

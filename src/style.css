@@ -1,81 +1,167 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-}
-
-.calculator {
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 320px;
-}
-
-.calculator-screen {
-    width: 100%;
-    height: 80px;
-    font-size: 32px;
-    text-align: right;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
     padding: 20px;
-    border: none;
-    background-color: #252525;
-    color: white;
-    border-bottom: 2px solid #aaa;
+    background: #fafafa; /* Light background for better contrast */
+    color: #333; /* Dark text for readability */
 }
 
-.calculator-keys {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    padding: 20px;
+/* Text Gradient for All Text */
+.text-gradient {
+    background: linear-gradient(to right, #f09433, #ff6a6a, #ffad3a, #fff00e); /* Instagram-like gradient */
+    -webkit-background-clip: text; /* Ensures gradient only applies to the text */
+    -webkit-text-fill-color: transparent; /* Makes the text color transparent to show the gradient */
 }
 
-.key {
-    font-size: 24px;
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #f09433; /* Orange color for the header */
+}
+
+/* Navigation Bar */
+nav {
+    background: #1b2e56; /* Dark blue background for contrast */
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #ffffff; /* White text for visibility */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Add transition for shine effect */
+}
+
+nav a:hover {
+    color: #ffad3a; /* Light orange on hover for visibility */
+    text-shadow: 0 0 10px #ff6a6a, 0 0 20px #ff6a6a; /* Shine effect */
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+    background: white;
     padding: 20px;
-    background-color: #e0e0e0;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s; /* Animation for section */
 }
 
-.key:hover {
-    background-color: #d1d1d1;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.operator {
-    background-color: #f9a825;
+/* Accordion Styles */
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-.operator:hover {
-    background-color: #fbc02d;
+.accordion-header {
+    background-color: #f9f9f9;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, text-shadow 0.3s ease; /* Add transition for shine effect */
 }
 
-.clear {
-    grid-column: span 2;
-    background-color: #f44336;
-    color: white;
+.accordion-header:hover {
+    background-color: #e9e9e9;
+    text-shadow: 0 0 10px #f09433, 0 0 20px #f09433; /* Shine effect */
 }
 
-.clear:hover {
-    background-color: #e53935;
+.accordion-body {
+    display: none;
+    padding: 10px;
 }
 
-.key:active {
-    background-color: #c7c7c7;
+/* Links Section Styles */
+#links ul {
+    list-style: none;
+    padding: 0;
 }
 
-.key:focus {
-    outline: none;
+#links li {
+    margin-bottom: 10px;
+}
+
+#links a {
+    color: #c13584; /* Instagram color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Change color on hover */
+#links a:hover {
+    color: #ff4081; /* Instagram hover color */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    background: #1b2e56; /* Same dark blue as nav for consistency */
+    padding: 10px 0;
+}
+
+/* Footer Text Color */
+footer p {
+    color: #ffffff; /* White text for better visibility */
+    transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+/* Change footer text color on hover */
+footer p:hover {
+    color: #ffad3a; /* Light orange on hover */
+}
+
+/* Section Header Styles */
+h2 {
+    color: #f09433; /* Orange color for section headers */
+    transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+/* Change section header color on hover */
+h2:hover {
+    color: #ffad3a; /* Light orange on hover */
+}
+
+/* Apply gradient to all text in sections */
+h1, h2, p, li {
+    background: linear-gradient(to right, #f09433, #ff6a6a); /* Instagram gradient */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text transparent */
+}
+
+/* Special styles for h1 in header */
+header h1 {
+    background: linear-gradient(to right, #f09433, #ff6a6a); /* Instagram gradient */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text transparent */
 }
