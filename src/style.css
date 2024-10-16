@@ -4,13 +4,13 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 20px;
-    background: #fafafa; /* Light background for better contrast */
+    background: #FAFAFA; /* Light background for better contrast */
     color: #333; /* Dark text for readability */
 }
 
 /* Text Gradient for All Text */
 .text-gradient {
-    background: linear-gradient(to right, #f09433, #ff6a6a, #ffad3a, #fff00e); /* Instagram-like gradient */
+    background: linear-gradient(to right, #F09433, #FF6A6A, #FFAD3A, #FFF00E); /* Instagram-like gradient */
     background-clip: text; /* Ensures gradient only applies to the text */
     -webkit-text-fill-color: transparent; /* Makes the text color transparent to show the gradient */
 }
@@ -24,12 +24,12 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.5em;
-    color: #f09433; /* Orange color for the header */
+    color: #F09433; /* Orange color for the header */
 }
 
 /* Navigation Bar */
 nav {
-    background: #1b2e56; /* Dark blue background for contrast */
+    background: #1B2E56; /* Dark blue background for contrast */
     padding: 10px 0;
     border-radius: 5px;
 }
@@ -46,15 +46,15 @@ nav li {
 }
 
 nav a {
-    color: #ffffff; /* White text for visibility */
+    color: #FFFFFF; /* White text for visibility */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease, text-shadow 0.3s ease; /* Add transition for shine effect */
 }
 
 nav a:hover {
-    color: #ffad3a; /* Light orange on hover for visibility */
-    text-shadow: 0 0 10px #ff6a6a, 0 0 20px #ff6a6a; /* Shine effect */
+    color: #FFAD3A; /* Light orange on hover for visibility */
+    text-shadow: 0 0 10px #FF6A6A, 0 0 20px #FF6A6A; /* Shine effect */
 }
 
 /* Section Styles */
@@ -83,17 +83,30 @@ section {
     overflow: hidden;
 }
 
+/* Header Styles for Accordion */
 .accordion-header {
-    background-color: #f9f9f9;
+    background-color: #F9F9F9;
     cursor: pointer;
     padding: 10px;
     font-weight: bold;
-    transition: background-color 0.3s ease, text-shadow 0.3s ease; /* Add transition for shine effect */
+    position: relative; /* Set position relative for shadow effect */
+    animation: pulse 1.5s infinite; /* Pulse animation */
 }
 
-.accordion-header:hover {
-    background-color: #e9e9e9;
-    text-shadow: 0 0 10px #f09433, 0 0 20px #f09433; /* Shine effect */
+/* Rightward Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: translateX(0);
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    }
+    50% {
+        transform: translateX(5px); /* Move slightly to the right */
+        box-shadow: 0 0 10px rgba(255, 169, 83, 0.6); /* Glow effect */
+    }
+    100% {
+        transform: translateX(0); /* Return to original position */
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0); /* Remove glow */
+    }
 }
 
 .accordion-body {
@@ -102,66 +115,113 @@ section {
 }
 
 /* Links Section Styles */
-#links ul {
-    list-style: none;
-    padding: 0;
+#links {
+    margin-top: 20px; /* Add margin to separate from the heading */
 }
 
-#links li {
-    margin-bottom: 10px;
+#links h2 {
+    color: #F09433; /* Orange color for the Links heading */
+    margin-bottom: 10px; /* Space below the heading */
 }
 
-#links a {
-    color: #c13584; /* Instagram color */
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* Button Container */
+.link-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to next line if needed */
+    gap: 10px; /* Space between buttons */
 }
 
-/* Change color on hover */
-#links a:hover {
-    color: #ff4081; /* Instagram hover color */
+/* Button Styles */
+.link-buttons button {
+    background: linear-gradient(to right, #F09433, #FF6A6A); /* Use gradient for buttons */
+    color: white; /* White text for visibility */
+    border: none; /* Remove default border */
+    padding: 12px 18px; /* Add padding for better button appearance */
+    border-radius: 25px; /* Make edges more curved */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    font-size: 16px; /* Increase font size for better readability */
+    position: relative; /* Set position relative for spark effect */
+}
+
+.link-buttons button:hover {
+    background: linear-gradient(to right, #FF6A6A, #F09433); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Spark Animation */
+.link-buttons button::before {
+    content: ''; /* Empty content for the spark */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8); /* White color for spark */
+    animation: spark 1s infinite; /* Spark animation */
+}
+
+/* Spark Animation Keyframes */
+@keyframes spark {
+    0% {
+        transform: translate(-50%, -50%) scale(0); /* Start small */
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5); /* Scale up */
+        opacity: 0; /* Fade out */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0); /* Return to original size */
+        opacity: 0; /* Fully invisible */
+    }
+}
+
+.link-buttons button:hover::before {
+    animation: none; /* Stop spark animation on hover */
 }
 
 /* Footer Styles */
 footer {
     text-align: center;
     margin-top: 20px;
-    background: #1b2e56; /* Same dark blue as nav for consistency */
+    background: #1B2E56; /* Same dark blue as nav for consistency */
     padding: 10px 0;
 }
 
 /* Footer Text Color */
 footer p {
-    color: #ffffff; /* White text for better visibility */
+    color: #FFFFFF; /* White text for better visibility */
     transition: color 0.3s ease; /* Transition for hover effect */
 }
 
 /* Change footer text color on hover */
 footer p:hover {
-    color: #ffad3a; /* Light orange on hover */
+    color: #FFAD3A; /* Light orange on hover */
 }
 
 /* Section Header Styles */
 h2 {
-    color: #f09433; /* Orange color for section headers */
+    color: #F09433; /* Orange color for section headers */
     transition: color 0.3s ease; /* Transition for hover effect */
 }
 
 /* Change section header color on hover */
 h2:hover {
-    color: #ffad3a; /* Light orange on hover */
+    color: #FFAD3A; /* Light orange on hover */
 }
 
 /* Apply gradient to all text in sections */
 h1, h2, p, li {
-    background: linear-gradient(to right, #f09433, #ff6a6a); /* Instagram gradient */
+    background: linear-gradient(to right, #F09433, #FF6A6A); /* Instagram gradient */
     background-clip: text; /* Clip background to text */
     -webkit-text-fill-color: transparent; /* Make text transparent */
 }
 
 /* Special styles for h1 in header */
 header h1 {
-    background: linear-gradient(to right, #f09433, #ff6a6a); /* Instagram gradient */
+    background: linear-gradient(to right, #F09433, #FF6A6A); /* Instagram gradient */
     background-clip: text; /* Clip background to text */
     -webkit-text-fill-color: transparent; /* Make text transparent */
 }
