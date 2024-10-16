@@ -11,7 +11,7 @@ body {
 /* Text Gradient for All Text */
 .text-gradient {
     background: linear-gradient(to right, #f09433, #ff6a6a, #ffad3a, #fff00e); /* Instagram-like gradient */
-    -webkit-background-clip: text; /* Ensures gradient only applies to the text */
+    background-clip: text; /* Ensures gradient only applies to the text */
     -webkit-text-fill-color: transparent; /* Makes the text color transparent to show the gradient */
 }
 
@@ -155,13 +155,13 @@ h2:hover {
 /* Apply gradient to all text in sections */
 h1, h2, p, li {
     background: linear-gradient(to right, #f09433, #ff6a6a); /* Instagram gradient */
-    -webkit-background-clip: text; /* Clip background to text */
+    background-clip: text; /* Clip background to text */
     -webkit-text-fill-color: transparent; /* Make text transparent */
 }
 
 /* Special styles for h1 in header */
 header h1 {
     background: linear-gradient(to right, #f09433, #ff6a6a); /* Instagram gradient */
-    -webkit-background-clip: text; /* Clip background to text */
+    background-clip: text; /* Clip background to text */
     -webkit-text-fill-color: transparent; /* Make text transparent */
 }
