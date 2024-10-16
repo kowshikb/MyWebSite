@@ -19,6 +19,7 @@ body {
 header {
     text-align: center;
     margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 header h1 {
@@ -30,7 +31,7 @@ header h1 {
 /* Navigation Bar */
 nav {
     background: #1B2E56; /* Dark blue background for contrast */
-    padding: 10px 0;
+    padding: 5px 0; /* Reduced padding for a thinner bar */
     border-radius: 5px;
 }
 
@@ -45,6 +46,23 @@ nav li {
     margin-right: 20px;
 }
 
+/* Elastic Effect Keyframes */
+@keyframes elastic {
+    0%, 100% {
+        transform: scale(1); /* Original size */
+    }
+    30% {
+        transform: scale(1.1); /* Slightly larger */
+    }
+    50% {
+        transform: scale(0.9); /* Slightly smaller */
+    }
+    70% {
+        transform: scale(1.05); /* Back to slightly larger */
+    }
+}
+
+/* Link Styles */
 nav a {
     color: #FFFFFF; /* White text for visibility */
     text-decoration: none;
@@ -55,6 +73,7 @@ nav a {
 nav a:hover {
     color: #FFAD3A; /* Light orange on hover for visibility */
     text-shadow: 0 0 10px #FF6A6A, 0 0 20px #FF6A6A; /* Shine effect */
+    animation: elastic 0.5s ease; /* Apply elastic animation */
 }
 
 /* Section Styles */
@@ -128,7 +147,7 @@ section {
 .link-buttons {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping to next line if needed */
-    gap: 10px; /* Space between buttons */
+    gap: 22px; /* Space between buttons */
 }
 
 /* Button Styles */
@@ -139,47 +158,30 @@ section {
     padding: 12px 18px; /* Add padding for better button appearance */
     border-radius: 25px; /* Make edges more curved */
     cursor: pointer; /* Pointer cursor on hover */
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
     font-size: 16px; /* Increase font size for better readability */
     position: relative; /* Set position relative for spark effect */
+    animation: rubberBand 6s ease infinite; /* Apply rubber band animation */
 }
 
-.link-buttons button:hover {
-    background: linear-gradient(to right, #FF6A6A, #F09433); /* Reverse gradient on hover */
-    transform: scale(1.05); /* Slightly increase size on hover */
-}
-
-/* Spark Animation */
-.link-buttons button::before {
-    content: ''; /* Empty content for the spark */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.8); /* White color for spark */
-    animation: spark 1s infinite; /* Spark animation */
-}
-
-/* Spark Animation Keyframes */
-@keyframes spark {
-    0% {
-        transform: translate(-50%, -50%) scale(0); /* Start small */
-        opacity: 1; /* Fully visible */
+/* Rubber Band Animation */
+@keyframes rubberBand {
+    0%, 100% {
+        transform: scale(1); /* Original size */
+    }
+    30% {
+        transform: scale(1.2); /* Expand */
     }
     50% {
-        transform: translate(-50%, -50%) scale(1.5); /* Scale up */
-        opacity: 0; /* Fade out */
+        transform: scale(0.8); /* Shrink */
     }
-    100% {
-        transform: translate(-50%, -50%) scale(0); /* Return to original size */
-        opacity: 0; /* Fully invisible */
+    70% {
+        transform: scale(1.1); /* Slightly larger */
     }
 }
 
-.link-buttons button:hover::before {
-    animation: none; /* Stop spark animation on hover */
+/* Button Hover Effect */
+.link-buttons button:hover {
+    background: linear-gradient(to right, #FF6A6A, #F09433); /* Reverse gradient on hover */
 }
 
 /* Footer Styles */
